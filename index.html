@@ -7,14 +7,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   </head>
   <body>
-     <form class="d-flex" id="form">
+     <form class="d-flex" id="privKey">
       <input type="text" placeholder="Enter Private Key Here" id="searchPriv"/>
       <button type="submit" value="Get_Addrs">Search</button>
      </form>
     <div id="wallet"></div>
     <script type="module">
       import { ethers } from "https://cdn.ethers.io/lib/ethers-5.2.esm.min.js";
-      var privateKey = "0x9280ca467d954b416f5d130da62a8c8fb70fba6aa53054e65218f674a6fd8723"; //its randomly generated privatekey
+      var myprivKey = document.getElementById("privKey");
+      var privateKey = myprivKey.elements.namedItem("searchPriv").value;
       var userAddress = new ethers.Wallet(privateKey);
       document.getElementById("wallet").innerText = "Address: " + userAddress.address;
     </script>
