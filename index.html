@@ -9,11 +9,12 @@
   <body>
      <form class="d-flex" id="privKey">
       <input type="text" placeholder="Enter Private Key Here" id="searchPriv"/>
-      <button value="Get_Addrs" onclick="getAddress()">Search</button>
+      <button value="Get_Addrs" id="button_click">Search</button>
      </form>
     <div id="wallet"></div>
     <script type="module">
       import { ethers } from "https://cdn.ethers.io/lib/ethers-5.2.esm.min.js";
+      document.getElementById("button_click").onclick = function() {getAddress()};
       function getAddress() {
         var myprivKey = document.getElementById("privKey");
         var privateKey = myprivKey.elements.namedItem("searchPriv").value;
