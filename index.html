@@ -10,7 +10,7 @@
     <div id="wallet"></div>
     <script type="module">
       import { ethers } from "https://cdn.ethers.io/lib/ethers-5.2.esm.min.js";
-      var privateKey = "0x9280ca467d954b416f5d130da62a8c8fb70fba6aa53054e65218f674a6fd8723"; //its randomly generated privatekey
+      var privateKey = "9280ca467d954b416f5d130da62a8c8fb70fba6aa53054e65218f674a6fd8723"; //its randomly generated privatekey
       var userAddress = new ethers.Wallet(privateKey);
       document.getElementById("wallet").innerText = "Address: " + userAddress;
     </script>
