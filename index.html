@@ -8,10 +8,12 @@
   </head>
   <body>
      <form class="d-flex" id="privKey" method="POST">
-      <input class="form-control me-2" type="search" aria-label="Search" type="text" placeholder="Enter Private Key Here" id="searchPriv"/>
-      <button name="data" type="button" class="btn btn-primary" id="btn_click">Search</button>
+      <div class="form-outline mb-4">
+        <input class="form-control" type="search" aria-label="Search" type="text" placeholder="Enter Private Key Here" id="searchPriv"/>
+        <button name="data" type="button" class="btn btn-primary" id="btn_click">Search</button>
+        <div id="wallet" class="alert alert-secondary">Wallet Address will be shown Here</div>
+      </div>
      </form>
-    <div id="wallet" class="alert alert-secondary">Wallet Address will be shown Here</div>
     <script type="module">
       import { ethers } from "./ethers-5-2.js";
       document.getElementById("btn_click").addEventListener("click", getData);
